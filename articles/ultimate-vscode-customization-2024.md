@@ -1,6 +1,6 @@
 ---
 title: "ぼくがかんがえた最強の Visual Studio Code カスタマイズ 2024"
-published: false
+published: true
 type: "tech"
 topics: ["vscode", "editor"]
 emoji: "✨"
