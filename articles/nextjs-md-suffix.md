@@ -1,6 +1,6 @@
 ---
 title: "[Next.js] URL末尾に .md つけたらMarkdownをそのまま返す！"
-published: false
+published: true
 type: "tech"
 topics: ["nextjs", "markdown"]
 emoji: "🪄"
