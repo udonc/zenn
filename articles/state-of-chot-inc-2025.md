@@ -106,7 +106,7 @@ Arc からの移行でプライベートで使ってます。アドレスバー�
 
 ![ポインティングデバイスの利用状況](/images/state-of-chot-inc-2025/pointing-device-usage.png)
 
-マウスやトラックパットが人気でした。トラックボールは少数派！
+マウスやトラックパッドが人気でした。トラックボールは少数派！
 
 ## 🤖 AIツール
 
@@ -238,7 +238,7 @@ Visual Studio Codeが圧倒的にトップで、Cursor, Neovim, Zed が後に続
 #### Ghostty
 
 - 出たときに試しに移行してから、特に不満もないのでそのまま使っている感じです。正直 WezTerm の方が Lua でカスタマイズできるので好きかもです。
-- tmuxを使わずともpain分割でき、macOS標準ターミナルをラップしてグラフィックのところパフォーマンス改善してくれている（？）らしいので使ってます。アイコンも可愛い👻
+- tmuxを使わずともpane分割でき、macOS標準ターミナルをラップしてグラフィックのところパフォーマンス改善してくれている（？）らしいので使ってます。アイコンも可愛い👻
 
 ## 📦 推しパッケージマネージャ
 
@@ -302,6 +302,7 @@ Vercelに続いてCloudflare Workersの経験者が多い結果となりまし�
 ## ✨ Next.js の新機能
 
 ![Next.js新機能の認知度](/images/state-of-chot-inc-2025/nextjs-feature-awareness.jpg)
+
 Partial PrerenderingやReact Compilerといった機能の認知度は高いですが、使ったことのある人はまだまだ少なそうです…！
 
 ## ▲ Vercel 製品
