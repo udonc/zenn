@@ -302,7 +302,7 @@ Vercelに続いてCloudflare Workersの経験者が多い結果となりまし�
 ## ✨ Next.js の新機能
 
 ![Next.js新機能の認知度](/images/state-of-chot-inc-2025/nextjs-feature-awareness.jpg)
-Cache ComponentsやReact Compilerといった機能の認知度は高いですが、使ったことのある人はまだまだ少なそうです…！
+Partial PrerenderingやReact Compilerといった機能の認知度は高いですが、使ったことのある人はまだまだ少なそうです…！
 
 ## ▲ Vercel 製品
 
