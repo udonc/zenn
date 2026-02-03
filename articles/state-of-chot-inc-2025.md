@@ -1,5 +1,5 @@
 ---
-title: "State of chot Inc. 2025"
+title: "ちょっと社でアンケートとってみた - State of chot Inc. 2025"
 emoji: "📊"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["アンケート", "javascript", "typescript", "react", "開発環境"]
