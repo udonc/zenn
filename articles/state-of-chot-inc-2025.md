@@ -4,7 +4,7 @@ emoji: "📊"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["アンケート", "javascript", "typescript", "react", "開発環境"]
 publication_name: "chot"
-published: false
+published: true
 ---
 
 2026年になってしまいましたが、State of chot Inc. 2025 の集計結果を発表します！
