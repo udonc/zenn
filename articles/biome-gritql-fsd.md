@@ -1,6 +1,6 @@
 ---
-title: "Biome の GritQL プラグインで FSD のレイヤー依存ルールを自動強制する"
-emoji: "🏗️"
+title: "Biome + GritQL で FSD を守る"
+emoji: "🍰"
 type: "tech"
 topics: ["biome", "nextjs", "fsd", "gritql", "typescript"]
 published: false
