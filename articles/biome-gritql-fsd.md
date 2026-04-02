@@ -65,69 +65,13 @@ FSD のルール強制は **Biome 組み込みの `noRestrictedImports`** と **
 
 `biome.jsonc` には 12 個の `overrides` ブロックがあり、段階的にインポート制限を定義しています。なお、Biome の `overrides` はマージではなくリプレイスで適用されるため、共通のルールであっても各ブロックに重複して記述する必要があります。
 
-### レイヤー別の段階的制限
+具体的には、レイヤーごとに `includes` でスコープを切り、`noRestrictedImports` の `patterns` で上位レイヤーへの依存とディープインポートを禁止しています。`!` プレフィックスによる否定パターンで `index.server` / `index.client`（Server/Client バレル分離）や `@x/`（クロスインポート API）を例外として許可する、といった制御も可能です。バレルファイル専用のスコープでは、パスエイリアスを禁止し `./ui`, `./model` 等の許可セグメントからの相対 re-export のみに制限しています。
 
-```jsonc
-// entities 層: shared のみ許可（他の全レイヤーを禁止）
-{
-  "includes": ["src/entities/**"],
-  "linter": {
-    "rules": {
-      "style": {
-        "noRestrictedImports": {
-          "level": "error",
-          "options": {
-            "patterns": [
-              { "group": ["@app", "@app/**"], "message": "entities → app は禁止" },
-              { "group": ["@pages", "@pages/**"], "message": "entities → pages は禁止" },
-              { "group": ["@widgets", "@widgets/**"], "message": "entities → widgets は禁止" },
-              { "group": ["@features", "@features/**"], "message": "entities → features は禁止" },
-              // ディープインポート禁止（@x/ は例外として許可）
-              {
-                "group": [
-                  "@entities/*/**",
-                  "!@entities/*/index.server",
-                  "!@entities/*/index.client",
-                  "!@entities/*/@x/*"
-                ],
-                "message": "ディープインポート禁止"
-              }
-            ]
-          }
-        }
-      }
-    }
-  }
-}
-```
+以下は entities 層の例です。
 
-`!` プレフィックスによる否定パターンで、`index.server` / `index.client`（Server/Client バレル分離）や `@x/`（クロスインポート API）を例外として許可しています。
+https://github.com/udonc/next-fsd-template/blob/52d1f381002625907aa40118dfa87d12ad80dcb4/biome.jsonc#L319-L482
 
-### バレルファイル専用のスコープ
-
-```jsonc
-{
-  "includes": ["src/features/*/index.ts", "src/features/*/index.server.ts", ...],
-  "linter": {
-    "rules": {
-      "style": {
-        "noRestrictedImports": {
-          "options": {
-            "patterns": [
-              // 全パスエイリアスを禁止（相対パスのみ許可）
-              { "group": ["@app", "@app/**", "@pages", "@pages/**", ...] },
-              // 許可セグメント以外の相対インポートを禁止
-              { "group": ["./*", "./**", "!./ui", "!./ui/**", "!./model", "!./model/**", ...] }
-            ]
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-バレルファイルでパスエイリアスを禁止し、`./ui`, `./model`, `./api`, `./lib`, `./config` からの相対 re-export のみを許可します。
+設定の全体は テンプレートリポジトリの [`biome.jsonc`](https://github.com/udonc/next-fsd-template/blob/main/biome.jsonc) を参照してください。
 
 ### GritQL が必要になる境界線
 
