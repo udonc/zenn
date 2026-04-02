@@ -71,8 +71,6 @@ FSD のルール強制は **Biome 組み込みの `noRestrictedImports`** と **
 
 https://github.com/udonc/next-fsd-template/blob/52d1f381002625907aa40118dfa87d12ad80dcb4/biome.jsonc#L319-L482
 
-設定の全体は テンプレートリポジトリの [`biome.jsonc`](https://github.com/udonc/next-fsd-template/blob/main/biome.jsonc) を参照してください。
-
 ### GritQL が必要になる境界線
 
 `noRestrictedImports` でカバーできるのは**静的なパスパターンの許可/禁止**までです。以下は GritQL でないと対応できません。
