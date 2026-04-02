@@ -63,7 +63,7 @@ FSD のルール強制は **Biome 組み込みの `noRestrictedImports`** と **
 
 ## noRestrictedImports overrides との役割分担
 
-`biome.jsonc` には 12 個の `overrides` ブロックがあり、段階的にインポート制限を定義しています。
+`biome.jsonc` には 12 個の `overrides` ブロックがあり、段階的にインポート制限を定義しています。なお、Biome の `overrides` はマージではなくリプレイスで適用されるため、共通のルールであっても各ブロックに重複して記述する必要があります。
 
 ### レイヤー別の段階的制限
 
