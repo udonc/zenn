@@ -15,9 +15,9 @@ FSD (v2) は 6 つのレイヤー間で**依存を上から下への一方向の
 
 FSD のルール強制ツールには主に 3 つの選択肢があります。
 
-- **ESLint** (`eslint-plugin-boundaries` 等) - おそらく最も普及している。`no-restricted-imports` やプラグインベース
-- **Steiger** - FSD 公式リンター。専用 CLI でルールをチェックできる。LSPがサポートされていない。
-- **Biome GritQL** - Biome 2.0 から使えるカスタムプラグイン。**この記事の主題** 。
+- **ESLint** (`eslint-plugin-boundaries` 等) - おそらく最も普及しています。`no-restricted-imports` やプラグインベースです。
+- **Steiger** - FSD 公式のアーキテクチャリンターです。コードの中身（AST）ではなくファイル構造やレイヤーの命名規則をチェックします。ESLint とは守備範囲が異なるので併用が前提です。LSP はサポートされていません。
+- **Biome GritQL** - Biome 2.0 から使えるカスタムプラグインです。**この記事の主題**です。
 
 私は Next.js + FSD のテンプレートを作る中で、リンター/フォーマッターを Biome に一本化したいと考えていました。ESLint なら `eslint-plugin-boundaries` 等で同様のルール強制が可能ですが、Biome にはそれに相当するプラグインがありません。そこで GritQL でフルスクラッチ実装する道を選びました。
 
