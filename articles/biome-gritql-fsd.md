@@ -141,7 +141,7 @@ FSD のルール強制は **Biome 組み込みの `noRestrictedImports`** と **
 
 ## fsd-no-cross-import
 
-一番複雑なルールです。1 ファイルで **5 つの違反パターン** を検出します。
+FSD の[レイヤー間依存ルール](https://feature-sliced.design/ja/docs/reference/layers)と[クロスインポートの制約](https://feature-sliced.design/ja/docs/reference/public-api#public-api-for-cross-imports)に基づくルールで、一番複雑です。1 ファイルで **5 つの違反パターン** を検出します。
 
 ### 検出する 5 パターン
 
@@ -290,7 +290,7 @@ register_diagnostic(...)
 
 ### fsd-barrel-export-only
 
-FSD ではスライスの公開 API をバレルファイル（`index.ts`）で定義します。このバレルには re-export 以外の記述を許可しません。
+FSD ではスライスの[公開 API](https://feature-sliced.design/ja/docs/reference/public-api) をバレルファイル（`index.ts`）で定義します。このバレルには re-export 以外の記述を許可しません。
 
 ```grit
 file($name, $body) where {
@@ -323,7 +323,7 @@ file($name, $body) where {
 
 ### fsd-cross-import-api
 
-`@x/` ディレクトリは、entities レイヤー内でスライス間のクロスインポートを制御するための仕組みです。
+`@x/` ディレクトリは、entities レイヤー内でスライス間の[クロスインポート](https://feature-sliced.design/ja/docs/reference/public-api#public-api-for-cross-imports)を制御するための仕組みで、FSD の Public API として公式に定義されています。
 
 ```
 src/entities/
