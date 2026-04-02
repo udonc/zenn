@@ -317,7 +317,7 @@ file($name, $body) where {
 }
 ```
 
-ポイントは **ホワイトリスト方式** です。GritQL にはブラックリスト（「この構文以外」）を直接表現する方法がないため、許可しない構文を全て列挙して `contains` で探します。つまり、列挙されていない `JsExportNamedFromClause` や `JsExportFromClause`（re-export 構文）だけが残る、という設計です。
+ポイントは **「re-export 以外を禁止する」** という設計です。GritQL には「この構文以外」を直接表現する否定マッチがないため、禁止したい構文（`JsFunctionDeclaration` や `JsClassDeclaration` など）を全て列挙して `contains` で探します。結果として、列挙されていない `JsExportNamedFromClause` や `JsExportFromClause`（re-export 構文）だけが許可される形になります。
 
 `file($name, $body)` コンテキストを使うことで、ファイル名パターンに基づいてルール適用範囲を限定しています。
 
