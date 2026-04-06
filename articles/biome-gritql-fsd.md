@@ -3,7 +3,7 @@ title: "Biome + GritQL で FSD を守る"
 emoji: "🍰"
 type: "tech"
 topics: ["biome", "fsd", "gritql", "typescript"]
-published: false
+published: true
 publication_name: "chot"
 ---
 
