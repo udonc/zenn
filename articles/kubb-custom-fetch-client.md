@@ -16,7 +16,9 @@ publication_name: "chot"
 - Node.js v24.19.0
 - pnpm v11.25.0
 - TypeScript v7.0.2
-- Kubb v5.0.6
+- Kubb v5.2.0
+  - @kubb/plugin-ts v5.0.1
+  - @kubb/plugin-fetch v5.3.0
 - neverthrow v8.2.0
 
 ## Kubbを使ってみる
