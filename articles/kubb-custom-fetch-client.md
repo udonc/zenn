@@ -11,6 +11,10 @@ publication_name: "chot"
 
 ただ、生成されたコードが、自分のプロジェクトに最適とは限りません。この記事ではKubbとneverthrowを組み合わせて、結果を `ResultAsync` で表現するfetchクライアントを作りながら、自分のプロジェクトにとっての理想のfetchクライアントを設計する考え方を整理します。
 
+記事で使ったコードは、以下のリポジトリで公開しています。
+
+https://github.com/udonc/kubb-custom-fetch-client-demo
+
 ## 環境
 
 - Node.js v24.19.0
