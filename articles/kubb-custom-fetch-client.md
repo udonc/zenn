@@ -1,5 +1,5 @@
 ---
-title: "Kubbで理想のfetchクライアントを作る"
+title: "Kubbで理想のfetchクライアントを作りたいっ！！"
 emoji: "🧭"
 type: "tech"
 topics: ["kubb", "neverthrow", "openapi", "typescript", "fetch"]
