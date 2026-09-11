@@ -676,13 +676,13 @@ export function getBook(
   const { client: request = client, ...config } = options;
 
   return toResultAsync<GetBookResponses>(
-request({
-  ...config,
-  method: "GET",
-  url: "/books/{isbn}",
-  throwOnError: false,
-}),
-[200, 404],
+    request({
+      ...config,
+      method: "GET",
+      url: "/books/{isbn}",
+      throwOnError: false,
+    }),
+    [200, 404],
   );
 }`;
   assert.ok(
